@@ -1,7 +1,7 @@
 # stainwarpy
 
 <p align="center">
-  <img src="stainwarpy_logo.png" width="400" alt="Stainwarpy Logo">
+  <img src="stainwarpy_logo.png" width="600" alt="Stainwarpy Logo">
 </p>
 
 
