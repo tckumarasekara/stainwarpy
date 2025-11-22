@@ -44,9 +44,10 @@ jobs:
 
       # Create GitHub Release and attach artifacts
       - name: Create GitHub Release
-        uses: ncipollo/release-action@v2
+        uses: ncipollo/release-action@v1
         with:
           tag: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           body: "Release ${{ github.ref_name }} of stainwarpy"
-          files: dist/*.tar.gz,dist/*.whl
+          artifacts: dist/*.tar.gz,dist/*.whl
+          token: ${{ secrets.GITHUB_PAT }}
