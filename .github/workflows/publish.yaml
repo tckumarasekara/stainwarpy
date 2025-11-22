@@ -50,4 +50,4 @@ jobs:
           name: Release ${{ github.ref_name }}
           body: "Release ${{ github.ref_name }} of stainwarpy"
           artifacts: dist/*.tar.gz,dist/*.whl
-          token: ${{ secrets.GITHUB_PAT }}
+          token: ${{ secrets.GH_TOKEN }}
