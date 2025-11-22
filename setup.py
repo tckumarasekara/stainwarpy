@@ -10,8 +10,6 @@ setup(
         "histomicstk==1.4.0",
         "scikit-image==0.25.2",
         "scipy==1.16.3",
-        "itk==5.4.4.post1",
-        "itk-elastix==0.23.0",
         "typer[all]==0.20.0",
     ],
     python_requires=">=3.11",
@@ -29,5 +27,7 @@ setup(
     author="Thusheera Kumarasekara",
     author_email="tckumarasekara@gmail.com",
     description="Tools for image registration between multiplexed and HnE stained tissue images",
-    #url="https://github.com/tckumarasekara/", 
+    long_description=open("README.md", "r", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/tckumarasekara/stainwarpy", 
 )

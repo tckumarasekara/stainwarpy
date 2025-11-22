@@ -1,7 +1,7 @@
 # stainwarpy
 
 <p align="center">
-  <img src="stainwarpy_logo.png" width="600" alt="Stainwarpy Logo">
+  <img src="https://raw.githubusercontent.com/tckumarasekara/stainwarpy/main/stainwarpy_logo.png" width="600" alt="Stainwarpy Logo">
 </p>
 
 
