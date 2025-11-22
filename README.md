@@ -126,7 +126,7 @@ Although **stainwarpy** is mainly a command-line tool, its functions can also be
 from stainwarpy.regPipeline import registration_pipeline
 
 # run registration pipeline
-tform_maps, final_img, tre, mi = registration_pipeline(
+tform_map, final_img, tre, mi = registration_pipeline(
     fixed_path="fixed_image.tif",
     moving_path="moving_image.tif",
     fixed_px_sz=0.5,

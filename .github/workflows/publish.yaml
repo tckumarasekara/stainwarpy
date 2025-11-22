@@ -46,18 +46,18 @@ jobs:
         run: poetry build
 
       # Publish to TestPyPI
-      - name: Publish to TestPyPI
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: poetry publish --repository testpypi \
-                            --username __token__ \
-                            --password ${{ secrets.TEST_PYPI_API_TOKEN }}
+      # - name: Publish to TestPyPI
+      #   if: startsWith(github.ref, 'refs/tags/v')
+      #   run: poetry publish --repository testpypi \
+      #                       --username __token__ \
+      #                       --password ${{ secrets.TEST_PYPI_API_TOKEN }}
 
       # Publish to PyPI 
-      # - name: Publish to PyPI
-      #   if: startsWith(github.ref, 'refs/tags/v')
-      #   run: poetry publish \
-      #               --username __token__ \
-      #               --password ${{ secrets.PYPI_API_TOKEN }}
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: poetry publish \
+                    --username __token__ \
+                    --password ${{ secrets.PYPI_API_TOKEN }}
 
       # Create GitHub Release and attach artifacts
       - name: Create GitHub Release
