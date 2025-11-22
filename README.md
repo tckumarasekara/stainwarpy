@@ -1,5 +1,10 @@
 # stainwarpy
 
+<p align="center">
+  <img src="stainwarpy_logo.png" width="400" alt="Stainwarpy Logo">
+</p>
+
+
 **stainwarpy** is a command-line tool and a Python package for registering H&E stained and multiplexed tissue images. It provides a feature based registration pipeline, saving registered images, transformation maps and evaluation metrics.
 
 
