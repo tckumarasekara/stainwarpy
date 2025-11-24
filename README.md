@@ -99,11 +99,11 @@ stainwarpy transform-seg-mask <mask_path> <fixed_path> <output_folder_path> <tfo
 
 #### Arguments
 
-**mask_path** : Path to the segmentation mask of the moving image (.npy)
-**fixed_path** : Path to the fixed image (.tif/.tiff/.ome.tif/.ome.tiff)
-**output_folder_path** : Folder to save the transformed segmentation mask
-**tform_map_path** : Path to the transformation map
-**moving_px_sz** : Pixel size of the moving image (no need to provide for ome.tiff, so default: None)
+- **mask_path** : Path to the segmentation mask of the moving image (.npy)
+- **fixed_path** : Path to the fixed image (.tif/.tiff/.ome.tif/.ome.tiff)
+- **output_folder_path** : Folder to save the transformed segmentation mask
+- **tform_map_path** : Path to the transformation map
+- **moving_px_sz** : Pixel size of the moving image (no need to provide for ome.tiff, so default: None)
 
 #### Options
 
