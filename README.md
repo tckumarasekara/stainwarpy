@@ -64,7 +64,7 @@ stainwarpy register data/fixed_img.tif data/moving_img.tif ../output multiplexed
 
 #### Output
 
-After running registration, the following files/folders will be generated:
+After running registration, the following files/folders will be generated and saved in the specified output folder:
 
 - **results/registration_metrics.json** — TRE and Mutual Information  
 - **results/0_final_channel_image.tif** — Registered image (in the pixel size of moving image)
@@ -78,7 +78,7 @@ stainwarpy extract-channel <file_path> <output_folder_path> [--channel-idx N]
 ```
 
 #### Arguments
-- **file-path*** : Path to multichannel image (.tif/.tiff/.ome.tif/.ome.tiff)
+- **file-path** : Path to multichannel image (.tif/.tiff/.ome.tif/.ome.tiff)
 - **output-folder-path** : Folder to save the extracted channel image
 
 #### Options
@@ -86,7 +86,7 @@ stainwarpy extract-channel <file_path> <output_folder_path> [--channel-idx N]
  
 #### Output
 
-- **/multiplexed_channel_{channel_idx}.tif** - Image with the extracted channel
+- **multiplexed_channel_{channel_idx}.tif** - Image with the extracted channel saved in the specified output folder
 
 
 ### Transform segmentation Masks
@@ -111,7 +111,7 @@ stainwarpy transform-seg-mask <mask_path> <fixed_path> <output_folder_path> <tfo
 
 #### Output
 
-- **/transformed_segmentation_mask.npy** : The segmentation mask transformed to the fixed image coordinate space
+- **transformed_segmentation_mask.npy** : The segmentation mask transformed to the fixed image coordinate space saved in the specified output folder
 
 
 ---

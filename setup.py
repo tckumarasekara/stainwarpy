@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="stainwarpy",
-    version="0.1.2",
+    version="0.1.3",
     packages=find_packages(),
     install_requires=[
         "numpy==2.2.6",
@@ -12,7 +12,7 @@ setup(
         "scipy==1.16.3",
         "typer[all]==0.20.0",
     ],
-    python_requires=">=3.11",
+    python_requires=">=3.10",
     entry_points={
         "console_scripts": [
             "stainwarpy=stainwarpy.reg_cli:main",
