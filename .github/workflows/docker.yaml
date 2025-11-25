@@ -3,7 +3,7 @@ name: Build and Push Docker Image on Tag
 on:
   push:
     tags:
-      - 'dc*.*.*'  
+      - 'dk*.*.*'  
 
 jobs:
   build:
@@ -15,9 +15,9 @@ jobs:
 
     - name: Set PyPI version from Git tag
       run: |
-        # Extract tag name and remove leading 'dc'
+        # Extract tag name and remove leading 'dk'
         version=${GITHUB_REF##*/}   
-        version=${version#d}        
+        version=${version#dk}        
         echo "STAINWARPY_VERSION=$version" >> $GITHUB_ENV
         echo "Git tag $GITHUB_REF → PyPI version $version"
 
