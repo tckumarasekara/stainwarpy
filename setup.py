@@ -2,16 +2,22 @@ from setuptools import setup, find_packages
 
 setup(
     name="stainwarpy",
-    version="0.1.3",
+    version="0.1.4",
     packages=find_packages(),
     install_requires=[
         "numpy==2.2.6",
         "tifffile==2025.5.10",
+        "imagecodecs==2025.11.11",
         "scikit-image==0.25.2",
         "scipy==1.16.3",
         "typer[all]==0.20.0",
     ],
     python_requires=">=3.11",
+    extras_require={
+        "plots": [
+            "matplotlib",
+        ]
+    },
     entry_points={
         "console_scripts": [
             "stainwarpy=stainwarpy.reg_cli:main",

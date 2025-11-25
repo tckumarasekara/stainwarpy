@@ -1,4 +1,4 @@
-name: image-registration
+name: stainwarpy_env
 channels:
   - conda-forge
   - bioconda
@@ -10,6 +10,6 @@ dependencies:
   - pip:
       - numpy==2.2.6
       - tifffile==2025.5.10
-      - histomicstk==1.4.0
+      - imagecodecs==2025.11.11
       - scipy==1.16.3
       - "typer[all]==0.20.0"
