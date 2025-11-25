@@ -32,27 +32,26 @@ def register(
         feature_tform=feature_tform
     )
 
-    output_folder_path = os.path.join(output_folder, "results")
-    os.makedirs(output_folder_path, exist_ok=True)
+    os.makedirs(output_folder, exist_ok=True)
 
     # save registration metrics
-    metrics_output_path = os.path.join(output_folder_path, "registration_metrics.json")
+    metrics_output_path = os.path.join(output_folder, "registration_metrics.json")
 
     with open(metrics_output_path, "w") as f:
         json.dump({"TRE": tre, "Mutual Information": mi}, f)
     print(f"Registration metrics saved to {metrics_output_path}")
 
     # save registered image
-    final_img_path = os.path.join(output_folder_path, "0_final_channel_image.tif")
+    final_img_path = os.path.join(output_folder, "0_final_channel_image.tif")
     imwrite(final_img_path, final_img)
 
     print(f"Registered image saved to {final_img_path}")
 
     # save transformation map
 
-    np.save(os.path.join(output_folder_path, f"feature_based_transformation_map.npy"), transformation_map.params)
+    np.save(os.path.join(output_folder, f"feature_based_transformation_map.npy"), transformation_map.params)
 
-    print(f"Transformation maps saved to {output_folder_path}/feature_based_transformation_map.npy")
+    print(f"Transformation maps saved to {output_folder}/feature_based_transformation_map.npy")
 
 
 

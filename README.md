@@ -66,9 +66,9 @@ stainwarpy register data/fixed_img.tif data/moving_img.tif ../output multiplexed
 
 After running registration, the following files/folders will be generated and saved in the specified output folder:
 
-- **results/registration_metrics.json** — TRE and Mutual Information  
-- **results/0_final_channel_image.tif** — Registered image (in the pixel size of moving image)
-- **results/feature_based_transformation_map.npy** — Transformation map 
+- **registration_metrics.json** — TRE and Mutual Information  
+- **0_final_channel_image.tif** — Registered image (in the pixel size of moving image)
+- **feature_based_transformation_map.npy** — Transformation map 
 
 
 ### Extract a Channel (DAPI can be extracted for registration)
