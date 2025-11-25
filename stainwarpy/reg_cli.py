@@ -33,7 +33,7 @@ def register(
     )
 
     output_folder_path = os.path.join(output_folder, "results")
-    os.makedirs(output_folder, exist_ok=True)
+    os.makedirs(output_folder_path, exist_ok=True)
 
     # save registration metrics
     metrics_output_path = os.path.join(output_folder_path, "registration_metrics.json")
@@ -65,9 +65,8 @@ def extract_channel_cmd(
     img = load_image_data(file_path)
     img_ch = extract_channel(img, channel_idx)
 
-    img_folder_path = os.path.join(output_folder_path, "channel_extracted_image")
-    os.makedirs(img_folder_path, exist_ok=True)
-    img_path = os.path.join(img_folder_path, f"multiplexed_channel_{channel_idx}.tif")
+    os.makedirs(output_folder_path, exist_ok=True)
+    img_path = os.path.join(output_folder_path, f"multiplexed_channel_{channel_idx}.tif")
     imwrite(img_path, img_ch)
     print(f"Image with extracted channel saved to {img_path}")
 
