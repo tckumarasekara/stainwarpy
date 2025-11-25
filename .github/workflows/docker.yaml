@@ -3,7 +3,7 @@ name: Build and Push Docker Image on Tag
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - 'd*.*.*'  
 
 jobs:
   build:
@@ -15,10 +15,11 @@ jobs:
 
     - name: Set PyPI version from Git tag
       run: |
-        # Extract tag name and remove leading 'v'
-        version=${GITHUB_REF##*/}
-        version=${version#v}
+        # Extract tag name and remove leading 'd'
+        version=${GITHUB_REF##*/}   
+        version=${version#d}        
         echo "STAINWARPY_VERSION=$version" >> $GITHUB_ENV
+        echo "Git tag $GITHUB_REF → PyPI version $version"
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
@@ -29,7 +30,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
       with:
+        context: .
         push: true
         tags: username/stainwarpy-cli:latest,username/stainwarpy-cli:${{ env.STAINWARPY_VERSION }}
         build-args: |
-          STAI
+          STAINWARPY_VERSION=${{ env.STAINWARPY_VERSION }}
