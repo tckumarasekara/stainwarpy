@@ -32,6 +32,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: username/stainwarpy-cli:latest,username/stainwarpy-cli:${{ env.STAINWARPY_VERSION }}
+        tags: tckum/stainwarpy-cli:latest,tckum/stainwarpy-cli:${{ env.STAINWARPY_VERSION }}
         build-args: |
           STAINWARPY_VERSION=${{ env.STAINWARPY_VERSION }}
