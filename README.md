@@ -132,7 +132,7 @@ tform_map, final_img, tre, mi = registration_pipeline(
     fixed_px_sz=0.5,
     moving_px_sz=0.5,
     fixed_img="multiplexed",
-    feature_tform="affine"        # used if adv_tform= is not "similarity"
+    feature_tform="affine"        # used if adv_tform is not "similarity"
 )
 
 print("TRE:", tre)
@@ -142,7 +142,12 @@ print("Mutual Information:", mi)
 
 ## License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MIT License**. 
+
+This project includes portions of code in stainwarpy/preprocess.py adapted from **HistomicsTK**
+(https://github.com/DigitalSlideArchive/HistomicsTK/), which is licensed under **Apache License 2.0**.
+See [LICENSE_HISTOMICSTK.txt](LICENSE_HISTOMICSTK.txt) for the full license text.
+
 
 
 

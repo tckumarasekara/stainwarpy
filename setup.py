@@ -7,12 +7,11 @@ setup(
     install_requires=[
         "numpy==2.2.6",
         "tifffile==2025.5.10",
-        "histomicstk==1.4.0",
         "scikit-image==0.25.2",
         "scipy==1.16.3",
         "typer[all]==0.20.0",
     ],
-    python_requires=">=3.10",
+    python_requires=">=3.11",
     entry_points={
         "console_scripts": [
             "stainwarpy=stainwarpy.reg_cli:main",
