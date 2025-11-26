@@ -11,6 +11,9 @@ ARG STAINWARPY_VERSION
 # install stainwarpy
 RUN pip install --no-cache-dir stainwarpy==${STAINWARPY_VERSION}
 
+# allow both CLI usage and interactive testing
+SHELL ["/bin/bash", "-c"]
+
 # set entrypoint 
 ENTRYPOINT [ "stainwarpy" ]
 
