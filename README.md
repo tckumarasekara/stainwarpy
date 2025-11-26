@@ -4,6 +4,8 @@
   <img src="https://raw.githubusercontent.com/tckumarasekara/stainwarpy/main/stainwarpy_logo.png" width="600" alt="Stainwarpy Logo">
 </p>
 
+[![Docker](https://img.shields.io/badge/Docker-stainwarpy--cli-blue)](https://hub.docker.com/repository/docker/tckum/stainwarpy-cli)
+[![PyPI version](https://img.shields.io/pypi/v/stainwarpy)](https://pypi.org/project/stainwarpy/)
 
 **stainwarpy** is a command-line tool and a Python package for registering H&E stained and multiplexed tissue images. It provides a feature based registration pipeline, saving registered images, transformation maps and evaluation metrics.
 
